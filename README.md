@@ -1,6 +1,16 @@
 # location-marker
 
-This template should help get you started developing with Vue 3 in Vite.
+## Introduction
+This project used **Vue + Ant design UI framework, and hosted on AWS S3 publicly**. The application intergrated with Google Map api to allow user to search and bookmark their destination on Google Map, and record the latitude and longitude.
+
+## Google Map API
+The project used Google text search api for locating user input and time zone api to record the time of the location.
+
+Reference: 
+
+https://developers.google.com/maps/documentation/places/web-service/search-text
+https://developers.google.com/maps/documentation/timezone/overview
+
 
 ## Recommended IDE Setup
 
