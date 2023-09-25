@@ -49,11 +49,13 @@ import { Loader } from "@googlemaps/js-api-loader";
 import axios from "axios";
 import process from "process";
 let map;
-const GOOGLE_MAPS_API_KEY = "AIzaSyBVZZgEDJdHg1eW38hiCdJdn-teUU5ZZSY";
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_APP_GOOGLE_API_KEY;
 export default {
   name: "Bookmark Your Destination",
   setup() {
-    const loader = new Loader({ apiKey: GOOGLE_MAPS_API_KEY });
+    const loader = new Loader({
+      apiKey: GOOGLE_MAPS_API_KEY,
+    });
 
     async function initMap() {
       await loader.load();
@@ -150,7 +152,6 @@ export default {
         this.localTime = date.toLocaleString("en-US", {
           timeZone: data.timeZoneId,
         });
-        console.log(data);
         this.timeZone = data.timeZoneName;
       }
     },
